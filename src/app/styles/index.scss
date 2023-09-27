@@ -1,0 +1,26 @@
+@import 'reset';
+@import 'variables/global';
+@import 'themes/normal';
+@import 'themes/solar';
+
+body {
+  font: var(--font-m);
+  color: var(--s-primary-text);
+}
+
+.app {
+  min-height: 100vh;
+  background: linear-gradient(
+    0.25turn,
+    var(--bs-gray-900),
+    var(--bs-gray-800),
+    var(--bs-gray-900)
+  );
+}
+
+.content-page {
+  display: flex;
+}
+.collection {
+  flex: 1;
+}

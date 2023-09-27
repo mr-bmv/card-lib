@@ -1,0 +1,45 @@
+:root {
+  --font-family-main: 'Source Sans Pro', -apple-system, BlinkMacSystemFont,
+    'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif, 'Apple Color Emoji',
+    'Segoe UI Emoji', 'Segoe UI Symbol';
+
+  // s
+  --font-size-s: 12px;
+  --font-line-s: 20px;
+  --font-s: var(--font-size-s) / var(--font-line-s) var(--font-family-main);
+
+  // m
+  --font-size-m: 1rem;
+  --font-line-m: 1.5;
+  --font-weight-m: 400;
+  --font-m: var(--font-size-m) / var(--font-line-m) var(--font-family-main);
+
+  // l
+  --font-size-l: 24px;
+  --font-line-l: 32px;
+  --font-l: var(--font-size-l) / var(--font-line-l) var(--font-family-main);
+
+  // xl
+  --font-size-xl: 32px;
+  --font-line-xl: 40px;
+  --font-xl: var(--font-size-xl) / var(--font-line-xl) var(--font-family-main);
+
+  // Размеры
+  --navbar-height: 50px;
+  --sidebar-width: 300px;
+  --navbar-width: 600px;
+  --sidebar-width-collapsed: 80px;
+
+  // z - Индексы
+  --modal-z-index: 1000;
+  --overlay-z-index: 100;
+
+  // Typography
+  // h1
+
+  --font-size-h1: calc(1.375rem + 1.5vw);
+  --margin-top-h1: 0;
+  --margin-bottom-h1: 0.5rem;
+  --font-weight-h1: 500;
+  --line-height-h1: 1.2;
+}
