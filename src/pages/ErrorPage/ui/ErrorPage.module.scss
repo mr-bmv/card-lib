@@ -1,0 +1,16 @@
+.ErrorPage {
+  width: 100%;
+  height: calc(100vh - var(--navbar-height));
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.text {
+  color: tomato;
+  font-size: 32px;
+  font-weight: 600;
+  margin-bottom: 10px;
+  text-align: center;
+}
