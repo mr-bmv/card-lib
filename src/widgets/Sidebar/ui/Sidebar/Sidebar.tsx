@@ -12,7 +12,7 @@ export const Sidebar = memo(({ className = '' }: SidebarProps) => {
       data-testid="sidebar"
       className={classNames(cls.Sidebar, {}, [className])}
     >
-      text
+      456545646456
     </div>
   );
 });
