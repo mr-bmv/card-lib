@@ -1,0 +1,38 @@
+.Navbar {
+  width: 100%;
+  height: var(--navbar-height);
+  background: var(--bs-primary);
+  display: flex;
+  align-items: center;
+  padding: 20px;
+  color: var(--s-secondary-text);
+  justify-content: space-between;
+}
+
+.links {
+  margin-left: auto;
+}
+
+.mainLink {
+  margin-right: 15px;
+}
+
+.mainLinks {
+  display: flex;
+  width: 500px;
+  justify-content: space-between;
+  margin-left: 20px;
+  margin-right: 20px;
+}
+
+.login {
+  display: flex;
+  width: 110px;
+  justify-content: space-between;
+}
+
+.logo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
