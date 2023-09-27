@@ -2,6 +2,15 @@
   "translate": "Перевод",
   "mainPage": "Главная страница",
   "ln": "Русский",
-  "LogIn": "LogIn",
-  "En": "En"
+  "LogIn": "Войти",
+  "LogOut": "Выйти",
+  "En": "En",
+  "Ru": "Рус",
+  "pageReload": "Обновить страницу",
+  "pageNotFound": "Страница не найдена",
+  "errorHappened": "Произошла непредвиденная ошибка",
+  "loginForm": "Форма авторизации",
+  "usernameInput": "Введите username",
+  "passwordInput": "Введите пароль",
+  "enter":"Вход"
 }

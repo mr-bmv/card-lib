@@ -22,10 +22,8 @@ export const ErrorPage = ({ className = '' }: ErrorPageProps) => {
       data-testid="ErrorPage"
       className={classNames(cls.ErrorPage, {}, [className])}
     >
-      <div className={classNames(cls.text)}>
-        {t('Произошла непредвиденная ошибка')}
-      </div>
-      <Button onClick={reloadPage}>{t('Обновить страницу')}</Button>
+      <div className={classNames(cls.text)}>{t('errorHappened')}</div>
+      <Button onClick={reloadPage}>{t('pageReload')}</Button>
 
       <img src={logo} alt="Logo" width="340px" />
     </div>

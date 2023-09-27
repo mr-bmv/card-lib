@@ -1,9 +1,9 @@
 import { useTranslation } from 'react-i18next';
 
 const LibraryPage = () => {
-  const { t } = useTranslation('about');
+  const { t } = useTranslation('library');
 
-  return <div>{t('Библиотека')}</div>;
+  return <div>{t('library')}</div>;
 };
 
 export default LibraryPage;

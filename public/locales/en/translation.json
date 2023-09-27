@@ -2,6 +2,15 @@
   "translate": "Translate",
   "mainPage": "Main page",
   "ln": "English",
-  "LogIn": "LogIn",
-  "En": "En"
+  "LogIn": "Log In",
+  "LogOut": "Log Out",
+  "En": "En",
+  "Ru": "Ru",
+  "pageReload": "Page reload",
+  "pageNotFound": "Page not found",
+  "errorHappened": "Something went wrong",
+  "loginForm": "Login Form",
+  "usernameInput": "Your username",
+  "passwordInput": "Your пароль",
+  "enter": "Enter"
 }

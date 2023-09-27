@@ -1,9 +1,9 @@
 import { useTranslation } from 'react-i18next';
 
 const BmvPage = () => {
-  const { t } = useTranslation('about');
+  const { t } = useTranslation('bmv');
 
-  return <div>{t('Обо мне')}</div>;
+  return <div>{t('bmvAbout')}</div>;
 };
 
 export default BmvPage;

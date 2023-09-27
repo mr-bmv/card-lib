@@ -8,7 +8,7 @@ interface NotFoundPageProps {
 }
 
 export const NotFoundPage = ({ className = '' }: NotFoundPageProps) => {
-  const { t } = useTranslation();
+  const { t } = useTranslation('translation');
   return (
     <div
       data-testid="NotFoundPage"
@@ -17,7 +17,7 @@ export const NotFoundPage = ({ className = '' }: NotFoundPageProps) => {
       <div className={classNames(cls.container)}>
         <h1>
           <div> 404</div>
-          <div> {t('Страница не найдена')}</div>
+          <div> {t('pageNotFound')}</div>
         </h1>
         <div className="img">
           <img src={logo} alt="Logo" width="340px" />

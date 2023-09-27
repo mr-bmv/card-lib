@@ -7,6 +7,7 @@ import { NavbarItemsList } from '../../model/items';
 import { useTranslation } from 'react-i18next';
 import { Button, ThemeButton } from '@/shared/ui/Button/Button';
 import { LoginModal } from '@/features/AuthByUsername';
+import { LangSwitcher } from '@/widgets/LangSwitcher';
 
 interface NavbarProps {
   className?: string;
@@ -35,7 +36,7 @@ export const Navbar = ({ className = '' }: NavbarProps) => {
       <div className={classNames(cls.mainLinks)}>{itemsList}</div>
       <div className={classNames(cls.login)}>
         <div>@</div>
-        <div>{t('En')}</div>
+        <LangSwitcher />
         <Button
           theme={ThemeButton.CLEAR_INVERTED}
           className={cls.links}

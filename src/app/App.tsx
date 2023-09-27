@@ -3,7 +3,7 @@ import './styles/index.scss';
 import { useTheme } from './providers/ThemProvider';
 import { Navbar } from '@/widgets/Navbar';
 import { AppRouter } from './providers/routes';
-import { useEffect } from 'react';
+import { Suspense, useEffect } from 'react';
 import { useSelector } from 'react-redux';
 import { useAppDispatch } from '@/shared/lib/hooks/useAppDispatch/useAppDispatch';
 import { getUserMounted, userActions } from '@/entities/User';
@@ -19,8 +19,11 @@ const App = () => {
 
   return (
     <div className={classNames('app', {}, [theme])}>
-      <Navbar />
-      <div className="content-page">{mounted && <AppRouter />}</div>
+      {/* // suspense для использования i18n */}
+      <Suspense fallback="">
+        <Navbar />
+        <div className="content-page">{mounted && <AppRouter />}</div>
+      </Suspense>
     </div>
   );
 };
