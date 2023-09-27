@@ -1,0 +1,103 @@
+{
+  "posts": [
+    {
+      "id": 1,
+      "title": "json-server",
+      "userId": 1
+    },
+    {
+      "id": 2,
+      "title": "json-server",
+      "userId": 2
+    },
+    {
+      "username": "admin",
+      "password": "123",
+      "id": 3
+    }
+  ],
+  "comments": [
+    {
+      "id": 1,
+      "body": "some comment",
+      "postId": 1
+    }
+  ],
+  "users": [
+    {
+      "id": 1,
+      "username": "admin",
+      "password": "123"
+    }
+  ],
+  "profile": {
+    "id": "1",
+    "first": "Do",
+    "lastname": "Jhone",
+    "age": 25,
+    "currency": "EUR",
+    "country": "Ukraine",
+    "city": "Moscow",
+    "username": "admin213",
+    "avatar": "https://mobimg.b-cdn.net/v3/fetch/22/2207633df03a819cd72889249c8361a8.jpeg?w=1470&r=0.5625"
+  },
+  "collectible": [
+    {
+      "artist": "Nutthapon Petchthai",
+      "cardClass": "MAGE",
+      "collectible": true,
+      "cost": 5,
+      "dbfId": 2539,
+      "flavor": "It's on the rack next to ice lance, acid lance, and English muffin lance.",
+      "id": "AT_001",
+      "name": "Flame Lance",
+      "rarity": "COMMON",
+      "set": "TGT",
+      "spellSchool": "FIRE",
+      "text": "Deal $25 damage to a minion.",
+      "type": "SPELL"
+    },
+    {
+      "artist": "Tooth",
+      "cardClass": "MAGE",
+      "collectible": true,
+      "cost": 3,
+      "dbfId": 2541,
+      "flavor": "Burning man, brah.",
+      "id": "AT_002",
+      "mechanics": [
+        "SECRET"
+      ],
+      "name": "Effigy",
+      "rarity": "RARE",
+      "set": "TGT",
+      "spellSchool": "FIRE",
+      "text": "<b>Secret:</b> When a friendly minion dies, summon a random minion with the same Cost.",
+      "type": "SPELL"
+    }
+  ],
+  "cards": [
+    {
+      "cardClass": "DRUID",
+      "dbfId": 91662,
+      "health": 30,
+      "heroPowerDbfId": 1123,
+      "id": "AIBot_DruidTrainee_002_hb",
+      "name": "Druid Trainee",
+      "set": "THE_SUNKEN_CITY",
+      "type": "HERO"
+    },
+    {
+      "artist": "Anton Zemskov",
+      "cardClass": "SHAMAN",
+      "dbfId": 104998,
+      "health": 30,
+      "heroPowerDbfId": 74588,
+      "id": "AIBot_Event_Ragnaros_FireFestival_02m",
+      "name": "Fire Festival Ragnaros",
+      "rarity": "FREE",
+      "set": "TB",
+      "type": "HERO"
+    }
+  ]
+}
