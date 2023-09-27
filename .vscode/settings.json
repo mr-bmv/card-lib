@@ -3,6 +3,7 @@
     "i18next",
     "languagedetector",
     "lastname",
+    "LOCALSTORAGE",
     "reduxjs",
     "stylelint",
     "svgr",

@@ -1,10 +1,12 @@
 import { classNames } from '@/shared/lib/classNames/classNames';
 import cls from './Navbar.module.scss';
 import cards from '@/shared/assets/image/cards.png';
-import { useMemo } from 'react';
+import { useCallback, useMemo, useState } from 'react';
 import { NavbarItem } from '../NavbarItem/NavbarItem';
 import { NavbarItemsList } from '../../model/items';
 import { useTranslation } from 'react-i18next';
+import { Button, ThemeButton } from '@/shared/ui/Button/Button';
+import { LoginModal } from '@/features/AuthByUsername';
 
 interface NavbarProps {
   className?: string;
@@ -12,11 +14,16 @@ interface NavbarProps {
 
 export const Navbar = ({ className = '' }: NavbarProps) => {
   const { t } = useTranslation();
+  const [isAuthModal, setIsAuthModal] = useState(false);
+
   const itemsList = useMemo(
     () =>
       NavbarItemsList.map((item) => <NavbarItem item={item} key={item.path} />),
     []
   );
+
+  const onCloseModal = useCallback(() => setIsAuthModal(false), []);
+  const onShowModal = useCallback(() => setIsAuthModal(true), []);
 
   return (
     <div className={classNames(cls.Navbar, {}, [className])}>
@@ -29,7 +36,16 @@ export const Navbar = ({ className = '' }: NavbarProps) => {
       <div className={classNames(cls.login)}>
         <div>@</div>
         <div>{t('En')}</div>
-        <div>{t('LogIn')}</div>
+        <Button
+          theme={ThemeButton.CLEAR_INVERTED}
+          className={cls.links}
+          onClick={onShowModal}
+        >
+          {t('Login')}
+        </Button>
+        {isAuthModal && (
+          <LoginModal isOpen={isAuthModal} onClose={onCloseModal} />
+        )}
       </div>
     </div>
   );

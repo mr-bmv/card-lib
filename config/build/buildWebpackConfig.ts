@@ -35,6 +35,13 @@ export function buildWebpackConfig(options: BuildOptions): Configuration {
       rules: buildLoaders(options),
     },
     resolve: buildResolvers(options),
+    performance: !isDev
+      ? {
+          hints: false,
+          maxEntrypointSize: 512000,
+          maxAssetSize: 512000,
+        }
+      : undefined,
     devtool: isDev ? 'inline-source-map' : undefined,
     // настраиваем сервер разработки. для продакшена он не нужен
     devServer: isDev ? buildDevServer(options) : undefined,
