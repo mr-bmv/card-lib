@@ -5,9 +5,9 @@ export const MainPageAsync = lazy(
     new Promise((res) => {
       // eslint-disable-next-line @typescript-eslint/ban-ts-comment
       // @ts-ignore: Testing invalid input
-      setTimeout(() => res(import('./MainPage')), 1500);
+      setTimeout(() => res(import('./MainPage')), 1000);
     })
 );
 
-// заменить перед деплоем
+// TODO заменить перед деплоем
 // export const MainPageAsync = lazy(() => import("./MainPage"));
