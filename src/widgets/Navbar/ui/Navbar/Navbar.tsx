@@ -31,7 +31,7 @@ export const Navbar = ({ className = '' }: NavbarProps) => {
     <div className={classNames(cls.Navbar, {}, [className])}>
       <div className={classNames(cls.logo)}>
         <div className={classNames(cls.logo)}>
-          <img src={cards} alt="Logo" width="130px" />
+          <img src={cards} alt="Logo" width="70px" />
         </div>
       </div>
       <div className={classNames(cls.mainLinks)}>{itemsList}</div>
