@@ -12,8 +12,8 @@
 
 // Themes
 .primary {
-  border: 1px solid #b58900;
-  background-color: #b58900;
+  border: 1px solid var(--bs-primary);
+  background-color: var(--bs-primary);
   &:hover:not(:disabled) {
     border-color: #9a7400;
     background-color: #9a7400;
@@ -107,8 +107,8 @@
 }
 
 .danger {
-  border: 1px solid #d33682;
-  background-color: #d33682;
+  border: 1px solid var(--bs-danger);
+  background-color: var(--bs-danger);
   &:hover:not(:disabled) {
     border-color: #a92b68;
     background-color: #b32e6f;

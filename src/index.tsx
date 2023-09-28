@@ -14,11 +14,11 @@ root.render(
   <StrictMode>
     <BrowserRouter>
       <StoreProvider>
-        <ErrorBoundary>
-          <ThemeProvider>
+        <ThemeProvider>
+          <ErrorBoundary>
             <App />
-          </ThemeProvider>
-        </ErrorBoundary>
+          </ErrorBoundary>
+        </ThemeProvider>
       </StoreProvider>
     </BrowserRouter>
   </StrictMode>

@@ -8,6 +8,7 @@ import { useTranslation } from 'react-i18next';
 import { Button, ThemeButton } from '@/shared/ui/Button/Button';
 import { LoginModal } from '@/features/AuthByUsername';
 import { LangSwitcher } from '@/widgets/LangSwitcher';
+import { ThemeSwitcher } from '@/widgets/ThemeSwitcher';
 
 interface NavbarProps {
   className?: string;
@@ -35,7 +36,7 @@ export const Navbar = ({ className = '' }: NavbarProps) => {
       </div>
       <div className={classNames(cls.mainLinks)}>{itemsList}</div>
       <div className={classNames(cls.login)}>
-        <div>@</div>
+        <ThemeSwitcher />
         <LangSwitcher />
         <Button
           theme={ThemeButton.LINK}

@@ -8,7 +8,7 @@ const LibraryPage = () => {
     <>
       <div>{t('library')}</div>
       <div>
-        <Button theme={ThemeButton.PRIMARY} size={ButtonSize.L} disabled>
+        <Button theme={ThemeButton.PRIMARY} size={ButtonSize.L}>
           PRIMARY
         </Button>
         <Button theme={ThemeButton.SECONDARY} size={ButtonSize.L}>

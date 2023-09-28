@@ -1,4 +1,4 @@
-:root {
+.app_light_theme {
   --bs-indigo: #6610f2;
   --bs-purple: #6f42c1;
   --bs-pink: #e83e8c;
@@ -23,8 +23,8 @@
   --bs-gray-900: #002b36;
 
   // background
-  --bs-bg-primary: #002b36;
-  --bs-bg-secondary: #073642;
+  --bs-bg-primary: #fdf6e3;
+  --bs-bg-secondary: #fdf6e3;
 
   // main colors
   --bs-primary: #b58900;
@@ -37,7 +37,7 @@
   --bs-dark: #073642;
 
   // text
-  --s-primary-text: #839496;
+  --s-primary-text: #333;
   --s-secondary-text: #fff;
   --bs-primary-text-emphasis: #483700;
   --bs-secondary-text-emphasis: #343b3c;
