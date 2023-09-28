@@ -41,6 +41,7 @@ export const routeConfig: Record<AppRoutes, AppRoutesProps> = {
   [AppRoutes.LIBRARY]: {
     path: RoutePath.library,
     element: <LibraryPage />,
+    authOnly: true,
   },
   [AppRoutes.ABOUT]: {
     path: RoutePath.about,

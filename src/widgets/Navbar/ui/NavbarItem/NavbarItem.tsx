@@ -4,6 +4,8 @@ import { classNames } from '@/shared/lib/classNames/classNames';
 import cls from './NavbarItem.module.scss';
 import { NavbarItemType } from '../../model/items';
 import { AppLink, AppLinkTheme } from '@/shared/ui/AppLink/AppLink';
+import { useSelector } from 'react-redux';
+import { getUserAuthData } from '@/entities/User';
 
 interface NavbarItemProps {
   item: NavbarItemType;
@@ -11,11 +13,11 @@ interface NavbarItemProps {
 
 export const NavbarItem = memo(({ item }: NavbarItemProps) => {
   const { t } = useTranslation();
-  // const isAuth = useSelector(getUserAuthData);
+  const isAuth = useSelector(getUserAuthData);
 
-  // if (item.authOnly && !isAuth) {
-  //   return null;
-  // }
+  if (item.authOnly && !isAuth) {
+    return null;
+  }
 
   return (
     <AppLink
