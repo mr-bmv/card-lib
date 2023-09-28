@@ -14,8 +14,10 @@ const App = () => {
   const mounted = useSelector(getUserMounted);
 
   useEffect(() => {
-    dispatch(userActions.initAuthData());
-  }, [dispatch]);
+    if (!mounted) {
+      dispatch(userActions.initAuthData());
+    }
+  }, [dispatch, mounted]);
 
   return (
     <div className={classNames('app', {}, [theme])}>
