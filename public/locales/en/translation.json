@@ -1,7 +1,7 @@
 {
   "translate": "Translate",
   "mainPage": "Main page",
-  "ln": "English",
+  "ln": "Ru",
   "LogIn": "Log In",
   "LogOut": "Log Out",
   "En": "En",
@@ -13,5 +13,6 @@
   "usernameInput": "Your username",
   "passwordInput": "Your пароль",
   "enter": "Enter",
-  "generateError": "Generate Error"
+  "generateError": "Generate Error",
+  "incorrectData": "Wrong username or password"
 }

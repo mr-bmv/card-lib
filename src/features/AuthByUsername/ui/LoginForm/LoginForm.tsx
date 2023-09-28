@@ -1,6 +1,6 @@
 import { classNames } from '@/shared/lib/classNames/classNames';
 import { useTranslation } from 'react-i18next';
-import { Button } from '@/shared/ui/Button/Button';
+import { Button, ThemeButton } from '@/shared/ui/Button/Button';
 import { Input } from '@/shared/ui/Input/Input';
 import { useSelector } from 'react-redux';
 import { memo, useCallback } from 'react';
@@ -17,6 +17,7 @@ import { loginByUsername } from '../../model/services/loginByUsername/loginByUse
 import { loginActions, loginReducer } from '../../model/slice/loginSlice';
 import cls from './LoginForm.module.scss';
 import { useAppDispatch } from '@/shared/lib/hooks/useAppDispatch/useAppDispatch';
+import CloseIcon from '@/shared/assets/icons/close.svg';
 
 export interface LoginFormProps {
   className?: string;
@@ -57,16 +58,20 @@ const LoginForm = memo(({ className = '', onSuccess }: LoginFormProps) => {
     if (result.meta.requestStatus === 'fulfilled') onSuccess();
   }, [dispatch, onSuccess, password, username]);
 
+  const onClose = useCallback(() => {
+    onSuccess();
+  }, [onSuccess]);
+
   return (
     <DynamicModuleLoader removeAfterUnmount reducers={initialReducers}>
       <div className={classNames(cls.LoginForm, {}, [className])}>
-        <Text title={t('loginForm')} />
-        {error && (
-          <Text
-            text={t('Вы ввели неверный логин или пароль')}
-            theme={TextTheme.ERROR}
-          />
-        )}
+        <div className={classNames(cls.description, {}, [className])}>
+          <Text title={t('loginForm')} />
+          <Button theme={ThemeButton.LINK} onClick={onClose}>
+            <CloseIcon width="20px" height="20px" />
+          </Button>
+        </div>
+        {error && <Text text={t('incorrectData')} theme={TextTheme.ERROR} />}
         <Input
           autofocus
           type="text"
@@ -83,7 +88,6 @@ const LoginForm = memo(({ className = '', onSuccess }: LoginFormProps) => {
           value={password}
         />
         <Button
-          // theme={ThemeButton.OUTLINE}
           className={cls.loginBtn}
           onClick={onLoginClick}
           disabled={isLoading}

@@ -1,7 +1,7 @@
 {
   "translate": "Перевод",
   "mainPage": "Главная страница",
-  "ln": "Русский",
+  "ln": "En",
   "LogIn": "Войти",
   "LogOut": "Выйти",
   "En": "En",
@@ -13,5 +13,6 @@
   "usernameInput": "Введите username",
   "passwordInput": "Введите пароль",
   "enter": "Вход",
-  "generateError": "Создать ошибку"
+  "generateError": "Создать ошибку",
+  "incorrectData": "Вы ввели неверный логин или пароль"
 }

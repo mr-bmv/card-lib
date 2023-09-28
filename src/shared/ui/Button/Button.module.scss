@@ -14,6 +14,7 @@
 .primary {
   border: 1px solid var(--bs-primary);
   background-color: var(--bs-primary);
+
   &:hover:not(:disabled) {
     border-color: #9a7400;
     background-color: #9a7400;
@@ -24,6 +25,7 @@
   color: #b58900;
   background-color: unset;
   border: 1px solid #b58900;
+
   &:hover {
     background-color: #b58900;
     color: #fff;
@@ -33,6 +35,7 @@
 .secondary {
   border: 1px solid #839496;
   background-color: #839496;
+
   &:hover:not(:disabled) {
     border-color: #697678;
     background-color: #6f7e80;
@@ -43,6 +46,7 @@
   color: #839496;
   background-color: unset;
   border: 1px solid #839496;
+
   &:hover {
     background-color: #839496;
     color: #fff;
@@ -52,6 +56,7 @@
 .success {
   border: 1px solid #2aa198;
   background-color: #2aa198;
+
   &:hover:not(:disabled) {
     border-color: #22817a;
     background-color: #248981;
@@ -62,6 +67,7 @@
   color: #2aa198;
   background-color: unset;
   border: 1px solid #2aa198;
+
   &:hover {
     background-color: #2aa198;
     color: #fff;
@@ -71,6 +77,7 @@
 .info {
   border: 1px solid #268bd2;
   background-color: #268bd2;
+
   &:hover:not(:disabled) {
     border-color: #1e6fa8;
     background-color: #2076b3;
@@ -81,6 +88,7 @@
   color: #268bd2;
   background-color: unset;
   border: 1px solid #268bd2;
+
   &:hover {
     background-color: #268bd2;
     color: #fff;
@@ -90,6 +98,7 @@
 .warning {
   border: 1px solid #cb4b16;
   background-color: #cb4b16;
+
   &:hover:not(:disabled) {
     border-color: #a23c12;
     background-color: #ad4013;
@@ -100,6 +109,7 @@
   color: #cb4b16;
   background-color: unset;
   border: 1px solid #cb4b16;
+
   &:hover {
     background-color: #cb4b16;
     color: #fff;
@@ -109,6 +119,7 @@
 .danger {
   border: 1px solid var(--bs-danger);
   background-color: var(--bs-danger);
+
   &:hover:not(:disabled) {
     border-color: #a92b68;
     background-color: #b32e6f;
@@ -119,6 +130,7 @@
   color: #d33682;
   background-color: unset;
   border: 1px solid #d33682;
+
   &:hover {
     background-color: #d33682;
     color: #fff;
@@ -129,6 +141,7 @@
   border: 1px solid #fdf6e3;
   background-color: #fdf6e3;
   color: #000;
+
   &:hover:not(:disabled) {
     border-color: #cac5b6;
     background-color: #d7d1c1;
@@ -139,6 +152,7 @@
   color: #fdf6e3;
   background-color: unset;
   border: 1px solid #fdf6e3;
+
   &:hover {
     background-color: #fdf6e3;
     color: #000;
@@ -148,6 +162,7 @@
 .dark {
   border: 1px solid #073642;
   background-color: #073642;
+
   &:hover:not(:disabled) {
     border-color: #204a55;
     background-color: #2c545e;
@@ -158,6 +173,7 @@
   color: #073642;
   background-color: unset;
   border: 1px solid #073642;
+
   &:hover {
     background-color: #073642;
     color: #fff;
@@ -189,11 +205,15 @@
 }
 
 .link {
+  display: flex;
+  align-items: center;
   border: unset;
   background-color: unset;
   padding: 0;
-  color: rgba(255, 255, 255, 0.55);
+  color: rgb(255 255 255 / 55%);
+  fill: var(--bs-primary);
+
   &:hover {
-    color: rgba(255, 255, 255, 0.8);
+    color: rgb(255 255 255 / 80%);
   }
 }
