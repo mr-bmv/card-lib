@@ -3,12 +3,15 @@ import cls from './Button.module.scss';
 import { ButtonHTMLAttributes, FC } from 'react';
 
 export enum ThemeButton {
-  CLEAR = 'clear',
-  CLEAR_INVERTED = 'clearInverted',
-  OUTLINE = 'outline',
-  OUTLINE_RED = 'outline_red',
-  BACKGROUND = 'background',
-  BACKGROUND_INVERTED = 'backgroundInverted',
+  PRIMARY = 'primary',
+  SECONDARY = 'secondary',
+  SUCCESS = 'success',
+  INFO = 'info',
+  WARNING = 'warning',
+  DANGER = 'danger',
+  LIGHT = 'light',
+  DARK = 'dark',
+  LINK = 'link',
 }
 
 export enum ButtonSize {
@@ -17,30 +20,33 @@ export enum ButtonSize {
   XL = 'size_xl',
 }
 
-interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
+interface ICommonButton extends ButtonHTMLAttributes<HTMLButtonElement> {
   className?: string;
   theme?: ThemeButton;
-  square?: boolean;
   size?: ButtonSize;
-  disabled?: boolean;
 }
+
+type isDisabledButton = ICommonButton & { disabled?: boolean; outline?: never };
+type IOutlineButton = ICommonButton & { outline?: boolean; disabled?: never };
+
+type ButtonProps = isDisabledButton | IOutlineButton;
 
 export const Button: FC<ButtonProps> = (props) => {
   const {
     className = '',
     children,
-    theme = ThemeButton.OUTLINE,
-    square = false,
+    theme = ThemeButton.PRIMARY,
+    outline = false,
     disabled = false,
-    size = ButtonSize.M,
+    size = ButtonSize.L,
     ...otherProps
   } = props;
 
   const mods: Record<string, boolean> = {
     [cls[theme]]: true,
-    [cls.square]: square,
     [cls[size]]: true,
     [cls.disabled]: disabled,
+    [cls.outline]: outline,
   };
 
   return (

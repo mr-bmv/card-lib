@@ -12,5 +12,6 @@
   "loginForm": "Форма авторизации",
   "usernameInput": "Введите username",
   "passwordInput": "Введите пароль",
-  "enter":"Вход"
+  "enter": "Вход",
+  "generateError": "Создать ошибку"
 }

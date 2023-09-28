@@ -12,5 +12,6 @@
   "loginForm": "Login Form",
   "usernameInput": "Your username",
   "passwordInput": "Your пароль",
-  "enter": "Enter"
+  "enter": "Enter",
+  "generateError": "Generate Error"
 }

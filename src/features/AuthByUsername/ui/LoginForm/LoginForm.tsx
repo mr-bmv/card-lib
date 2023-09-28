@@ -83,7 +83,7 @@ const LoginForm = memo(({ className = '', onSuccess }: LoginFormProps) => {
           value={password}
         />
         <Button
-          theme={ThemeButton.OUTLINE}
+          // theme={ThemeButton.OUTLINE}
           className={cls.loginBtn}
           onClick={onLoginClick}
           disabled={isLoading}

@@ -5,6 +5,13 @@
   align-items: center;
   justify-content: center;
   flex-direction: column;
+  min-height: 100vh;
+  background: linear-gradient(
+    0.25turn,
+    var(--bs-gray-900),
+    var(--bs-gray-800),
+    var(--bs-gray-900)
+  );
 }
 
 .text {

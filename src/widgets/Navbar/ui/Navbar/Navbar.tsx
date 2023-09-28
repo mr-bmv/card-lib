@@ -38,7 +38,7 @@ export const Navbar = ({ className = '' }: NavbarProps) => {
         <div>@</div>
         <LangSwitcher />
         <Button
-          theme={ThemeButton.CLEAR_INVERTED}
+          theme={ThemeButton.LINK}
           className={cls.links}
           onClick={onShowModal}
         >
