@@ -19,5 +19,10 @@ declare module '*.svg' {
   // export default content
 }
 
+declare module '*.webp' {
+  const ref: string;
+  export default ref;
+}
+
 declare const __IS_DEV__: boolean;
 declare const __API__: string;

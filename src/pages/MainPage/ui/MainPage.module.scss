@@ -1,0 +1,43 @@
+.imgCover {
+  position: relative;
+
+  img {
+    width: 100vw;
+    height: 60vh;
+    object-fit: cover;
+  }
+
+  .loginBtn {
+    position: absolute;
+    left: 50%;
+    bottom: 10%;
+    transform: translateX(-50%);
+  }
+}
+
+.randomCover {
+  display: flex;
+  display: flex;
+  width: 80vw;
+  align-items: center;
+  margin: auto;
+}
+
+.btn {
+  width: inherit;
+}
+
+.mainContent {
+  margin-right: 35px;
+  margin-left: 10px;
+  height: 25vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: justify;
+  justify-content: center;
+}
+
+.randomCard img {
+  height: 30vh;
+}
