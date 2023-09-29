@@ -1,7 +1,11 @@
 {
   "translate": "Translate",
   "mainPage": "Main page",
-  "ln": "Ru",
+  "main": "Main",
+  "library": "Library",
+  "aboutSite": "About Site",
+  "aboutMe": "About Me",
+  "ln": "En",
   "LogIn": "Log In",
   "LogOut": "Log Out",
   "En": "En",

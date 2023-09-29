@@ -9,6 +9,8 @@ import { Button, ThemeButton } from '@/shared/ui/Button/Button';
 import { LoginModal } from '@/features/AuthByUsername';
 import { LangSwitcher } from '@/widgets/LangSwitcher';
 import { ThemeSwitcher } from '@/widgets/ThemeSwitcher';
+import { useDispatch, useSelector } from 'react-redux';
+import { getUserAuthData, userActions } from '@/entities/User';
 
 interface NavbarProps {
   className?: string;
@@ -17,6 +19,8 @@ interface NavbarProps {
 export const Navbar = ({ className = '' }: NavbarProps) => {
   const { t } = useTranslation();
   const [isAuthModal, setIsAuthModal] = useState(false);
+  const authData = useSelector(getUserAuthData);
+  const dispatch = useDispatch();
 
   const itemsList = useMemo(
     () =>
@@ -24,8 +28,26 @@ export const Navbar = ({ className = '' }: NavbarProps) => {
     []
   );
 
+  const onLogout = useCallback(() => {
+    dispatch(userActions.logout());
+  }, [dispatch]);
+
   const onCloseModal = useCallback(() => setIsAuthModal(false), []);
   const onShowModal = useCallback(() => setIsAuthModal(true), []);
+
+  const loginBtn = authData ? (
+    <Button theme={ThemeButton.LINK} className={cls.links} onClick={onLogout}>
+      {t('Выйти')}
+    </Button>
+  ) : (
+    <Button
+      theme={ThemeButton.LINK}
+      className={cls.links}
+      onClick={onShowModal}
+    >
+      {t('Login')}
+    </Button>
+  );
 
   return (
     <div className={classNames(cls.Navbar, {}, [className])}>
@@ -38,13 +60,7 @@ export const Navbar = ({ className = '' }: NavbarProps) => {
       <div className={classNames(cls.login)}>
         <ThemeSwitcher />
         <LangSwitcher />
-        <Button
-          theme={ThemeButton.LINK}
-          className={cls.links}
-          onClick={onShowModal}
-        >
-          {t('Login')}
-        </Button>
+        {loginBtn}
         {isAuthModal && (
           <LoginModal isOpen={isAuthModal} onClose={onCloseModal} />
         )}

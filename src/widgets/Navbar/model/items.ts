@@ -9,19 +9,19 @@ export interface NavbarItemType {
 export const NavbarItemsList: NavbarItemType[] = [
   {
     path: RoutePath.main,
-    text: 'Главная',
+    text: 'main',
   },
   {
     path: RoutePath.library,
-    text: 'Библиотека',
+    text: 'library',
     authOnly: true,
   },
   {
     path: RoutePath.about,
-    text: 'О сайте',
+    text: 'aboutSite',
   },
   {
     path: RoutePath.bmv,
-    text: 'Обо мне',
+    text: 'aboutMe',
   },
 ];

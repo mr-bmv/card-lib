@@ -1,7 +1,11 @@
 {
   "translate": "Перевод",
   "mainPage": "Главная страница",
-  "ln": "En",
+  "main":"Главная",
+  "library":"Библиотека",
+  "aboutSite":"О сайте",
+  "aboutMe":"Обо мне",
+  "ln": "Ru",
   "LogIn": "Войти",
   "LogOut": "Выйти",
   "En": "En",
