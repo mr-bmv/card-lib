@@ -1,16 +1,17 @@
-import { classNames } from '@/shared/lib/classNames/classNames';
-import cls from './Navbar.module.scss';
-import cards from '@/shared/assets/image/cards.png';
-import { useCallback, useMemo, useState } from 'react';
-import { NavbarItem } from '../NavbarItem/NavbarItem';
-import { NavbarItemsList } from '../../model/items';
-import { useTranslation } from 'react-i18next';
-import { Button, ThemeButton } from '@/shared/ui/Button/Button';
+import { getUserAuthData } from '@/entities/User';
 import { LoginModal } from '@/features/AuthByUsername';
+import cards from '@/shared/assets/image/cards.png';
+import { classNames } from '@/shared/lib/classNames/classNames';
+import { Button, ThemeButton } from '@/shared/ui/Button/Button';
 import { LangSwitcher } from '@/widgets/LangSwitcher';
 import { ThemeSwitcher } from '@/widgets/ThemeSwitcher';
-import { useDispatch, useSelector } from 'react-redux';
-import { getUserAuthData, userActions } from '@/entities/User';
+import { useCallback, useMemo, useState } from 'react';
+import { useTranslation } from 'react-i18next';
+import { useSelector } from 'react-redux';
+import { NavbarItemsList } from '../../model/items';
+import { NavbarItem } from '../NavbarItem/NavbarItem';
+import cls from './Navbar.module.scss';
+import SelectMenu from './SelectMenu';
 
 interface NavbarProps {
   className?: string;
@@ -20,7 +21,6 @@ export const Navbar = ({ className = '' }: NavbarProps) => {
   const { t } = useTranslation();
   const [isAuthModal, setIsAuthModal] = useState(false);
   const authData = useSelector(getUserAuthData);
-  const dispatch = useDispatch();
 
   const itemsList = useMemo(
     () =>
@@ -28,17 +28,11 @@ export const Navbar = ({ className = '' }: NavbarProps) => {
     []
   );
 
-  const onLogout = useCallback(() => {
-    dispatch(userActions.logout());
-  }, [dispatch]);
-
   const onCloseModal = useCallback(() => setIsAuthModal(false), []);
   const onShowModal = useCallback(() => setIsAuthModal(true), []);
 
   const loginBtn = authData ? (
-    <Button theme={ThemeButton.LINK} className={cls.links} onClick={onLogout}>
-      {t('Выйти')}
-    </Button>
+    <SelectMenu />
   ) : (
     <Button
       theme={ThemeButton.LINK}

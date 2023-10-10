@@ -5,6 +5,7 @@
     width: 100vw;
     height: 60vh;
     object-fit: cover;
+    filter: brightness(0.6);
   }
 
   .loginBtn {
@@ -23,7 +24,9 @@
 }
 
 .btn {
-  width: inherit;
+  // Button {
+  //   width: max-content;
+  // }
 }
 
 .mainContent {
