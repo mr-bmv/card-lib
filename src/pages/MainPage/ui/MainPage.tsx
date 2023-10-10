@@ -32,25 +32,7 @@ const MainPage = () => {
         <div className={cls.randomCard}>
           <img src={randomCard} alt="Logo" />
         </div>
-        <div className={cls.mainContent}>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo adipisci
-          pariatur vel vero debitis? Dicta numquam beatae tenetur quis omnis.
-          Aut cupiditate quia repellendus minima. Enim sit quidem, deleniti
-          blanditiis beatae, similique cupiditate eos officiis debitis
-          voluptatum fugiat ad. Blanditiis, soluta nisi sint magni minima
-          ratione. Error eveniet a neque, similique iusto natus non odit quasi
-          consequatur minima iure maxime sapiente velit nisi cum exercitationem
-          voluptatem quas, sunt nesciunt? Quos accusamus magni esse beatae, fuga
-          recusandae reiciendis nam, sunt perferendis animi, culpa voluptatum
-          aspernatur numquam quod necessitatibus? Tenetur nisi laudantium quae
-          distinctio pariatur suscipit alias ad delectus obcaecati minus
-          recusandae optio quas omnis asperiores nemo exercitationem fugit
-          aspernatur modi, inventore sapiente? Iusto saepe eius nostrum mollitia
-          hic similique dicta facilis fugiat odit recusandae laboriosam dolor
-          autem aspernatur cum atque aperiam, ut error repellendus quo omnis et.
-          Quisquam, recusandae veritatis, ullam ipsum aliquam explicabo facilis
-          illum consequatur cupiditate impedit, magni sapiente?.
-        </div>
+        <div className={cls.mainContent}>7987798797987987454654564464</div>
         <div className={cls.btn}>
           <Button theme={ThemeButton.PRIMARY}>{t('Обновить карту')}</Button>
         </div>

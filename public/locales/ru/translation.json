@@ -1,10 +1,10 @@
 {
   "translate": "Перевод",
   "mainPage": "Главная страница",
-  "main":"Главная",
-  "library":"Библиотека",
-  "aboutSite":"О сайте",
-  "aboutMe":"Обо мне",
+  "main": "Главная",
+  "library": "Библиотека",
+  "aboutSite": "О сайте",
+  "aboutMe": "Обо мне",
   "ln": "Ru",
   "LogIn": "Войти",
   "LogOut": "Выйти",
@@ -18,5 +18,7 @@
   "passwordInput": "Введите пароль",
   "enter": "Вход",
   "generateError": "Создать ошибку",
-  "incorrectData": "Вы ввели неверный логин или пароль"
+  "incorrectData": "Вы ввели неверный логин или пароль",
+  "myProfile": "Профиль",
+  "myCollection": "Коллекция"
 }

@@ -18,5 +18,7 @@
   "passwordInput": "Your пароль",
   "enter": "Enter",
   "generateError": "Generate Error",
-  "incorrectData": "Wrong username or password"
+  "incorrectData": "Wrong username or password",
+  "myProfile": "Profile",
+  "myCollection": "Collection"
 }
