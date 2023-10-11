@@ -1,4 +1,5 @@
 // import { ProfileSchema } from '@/entities/Profile';
+import { ProfileSchema } from '@/entities/Profile';
 import { UserSchema } from '@/entities/User';
 import { LoginSchema } from '@/features/AuthByUsername';
 import {
@@ -16,7 +17,7 @@ export interface StateSchema {
 
   // async reducers
   loginForm?: LoginSchema;
-  // profile?: ProfileSchema;
+  profile?: ProfileSchema;
 }
 
 type OptionalRecord<K extends string | number | symbol, T> = {
