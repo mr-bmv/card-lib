@@ -1,0 +1,10 @@
+.dropdownItem {
+  display: flex;
+  margin: 10px auto;
+}
+
+.dropdownItem a {
+  max-width: 100px;
+  margin-left: 10px;
+  transition: 500ms;
+}

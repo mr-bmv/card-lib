@@ -1,8 +1,10 @@
-import { getUserAuthData } from '@/entities/User';
+import { getUserAuthData, userActions } from '@/entities/User';
 import { LoginModal } from '@/features/AuthByUsername';
 import cards from '@/shared/assets/image/cards.png';
 import { classNames } from '@/shared/lib/classNames/classNames';
+import { useAppDispatch } from '@/shared/lib/hooks/useAppDispatch/useAppDispatch';
 import { Button, ThemeButton } from '@/shared/ui/Button/Button';
+import { DropdownMenu } from '@/widgets/DropdownMenu';
 import { LangSwitcher } from '@/widgets/LangSwitcher';
 import { ThemeSwitcher } from '@/widgets/ThemeSwitcher';
 import { useCallback, useMemo, useState } from 'react';
@@ -11,7 +13,6 @@ import { useSelector } from 'react-redux';
 import { NavbarItemsList } from '../../model/items';
 import { NavbarItem } from '../NavbarItem/NavbarItem';
 import cls from './Navbar.module.scss';
-import SelectMenu from './SelectMenu';
 
 interface NavbarProps {
   className?: string;
@@ -21,6 +22,7 @@ export const Navbar = ({ className = '' }: NavbarProps) => {
   const { t } = useTranslation();
   const [isAuthModal, setIsAuthModal] = useState(false);
   const authData = useSelector(getUserAuthData);
+  const dispatch = useAppDispatch();
 
   const itemsList = useMemo(
     () =>
@@ -31,8 +33,25 @@ export const Navbar = ({ className = '' }: NavbarProps) => {
   const onCloseModal = useCallback(() => setIsAuthModal(false), []);
   const onShowModal = useCallback(() => setIsAuthModal(true), []);
 
+  const onLogout = useCallback(() => {
+    dispatch(userActions.logout());
+  }, [dispatch]);
+
+  const logoutItems = [
+    {
+      text: 'myProfile',
+      to: 'profile',
+    },
+    {
+      text: 'myCollection',
+    },
+    {
+      text: 'Logout',
+      onClick: onLogout,
+    },
+  ];
   const loginBtn = authData ? (
-    <SelectMenu />
+    <DropdownMenu items={logoutItems} btnText={authData?.username} />
   ) : (
     <Button
       theme={ThemeButton.LINK}
