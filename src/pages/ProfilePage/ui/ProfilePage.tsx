@@ -27,7 +27,7 @@ interface ProfilePageProps {
   className?: string;
 }
 
-export const ProfilePage = ({ className = '' }: ProfilePageProps) => {
+const ProfilePage = ({ className = '' }: ProfilePageProps) => {
   // работаем с async action
   const dispatch = useAppDispatch();
   const formData = useSelector(getProfileForm);
@@ -59,3 +59,5 @@ export const ProfilePage = ({ className = '' }: ProfilePageProps) => {
     </DynamicModuleLoader>
   );
 };
+
+export default ProfilePage;
